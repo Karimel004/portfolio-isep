@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@heroui/react": "^3.0.3",
+    "@heroui/styles": "^3.0.3",
     "@heroui/theme": "^2.4.26",
     "@supabase/supabase-js": "^2.105.0",
     "framer-motion": "^12.38.0",
