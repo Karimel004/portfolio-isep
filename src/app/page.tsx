@@ -1,20 +1,57 @@
 import { Button } from "@heroui/react";
-import SiteNavbar from "../components/SiteNavbar"; // On importe ta nouvelle barre !
+import SiteNavbar from "../components/SiteNavbar";
+import Image from "next/image";
+import myPhoto from "../../public/photo-profile.jpg";
 
 export default function Home() {
   return (
-    <main>
-      {/* On place la barre de navigation tout en haut de la page */}
+    <main className="min-h-screen bg-white dark:bg-[#0a0a0a] text-gray-900 dark:text-white">
       <SiteNavbar />
       
-      {/* Le reste de ta page */}
-      <div className="flex min-h-screen flex-col items-center justify-center gap-6 p-24">
-        <h1 className="text-4xl font-bold text-center">
-          Bienvenue sur mon Portfolio
-        </h1>
-        <Button color="primary" size="lg">
-          Mon premier bouton stylé 🚀
-        </Button>
+      {/* --- SECTION PRINCIPALE (HERO) --- */}
+      <div className="max-w-7xl mx-auto px-8 py-10 flex flex-col md:flex-row items-center justify-between gap-12 mt-10">
+        
+        {/* Partie Gauche : Le Texte */}
+        <div className="flex-1 space-y-6">
+          <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight">
+            Bonjour, je suis <br/>
+            <span className="text-blue-600 dark:text-blue-400">EL AMRANI Karim</span> 👋
+          </h1>
+          
+          <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
+            Étudiant à l'<strong>ISEP</strong> passionné par la technologie et le développement. Je conçois des solutions modernes et créatives. Bienvenue sur mon espace !
+          </p>
+          
+          {/* Les boutons d'action */}
+          <div className="flex flex-wrap gap-4 pt-4">
+            <Button color="primary" size="lg" radius="full">
+              Voir mes projets
+            </Button>
+            <Button variant="bordered" size="lg" radius="full">
+              Me contacter
+            </Button>
+          </div>
+        </div>
+
+        {/* Partie Droite : La Photo (LA CORRECTION EST ICI) */}
+        <div className="flex-1 flex justify-center md:justify-end">
+          
+          {/* Conteneur rond : Fond blanc forcé et flex-centrage */}
+          <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full bg-white border-[3px] border-blue-600 dark:border-blue-400 shadow-2xl overflow-hidden flex items-center justify-center z-10">
+            
+            {/* -- CORRECTION TECHNIQUE : On fixe la taille de l'image pour forcer le carré -- */}
+            <Image 
+              src={myPhoto} 
+              alt="Photo de Karim" 
+              width={300} // Largeur fixe explicite pour la simulation
+              height={300} // Hauteur fixe explicite (correspond à width pour forcer le carré)
+              className="object-cover scale-[0.90] rounded-full" // object-cover pour remplir, scale ajusté, rounded-full pour l'image
+              priority 
+            />
+            
+          </div>
+        </div>
+
       </div>
     </main>
   );
