@@ -3,6 +3,9 @@ import SiteNavbar from "../components/SiteNavbar";
 import Image from "next/image";
 import myPhoto from "../../public/photo-profile.jpg";
 import Skills from "../components/Skills";
+import Projects from "../components/Projects";
+// NOUVEAU : On importe le vrai composant Link de Next.js
+import Link from "next/link"; 
 
 export default function Home() {
   return (
@@ -23,21 +26,29 @@ export default function Home() {
             Étudiant à l'<strong>ISEP</strong> passionné par la technologie et le développement. Je conçois des solutions modernes et créatives. Bienvenue sur mon espace !
           </p>
           
-          {/* Les boutons d'action */}
+          {/* Les boutons d'action (LA CORRECTION EST ICI) */}
           <div className="flex flex-wrap gap-4 pt-4">
-            <Button color="primary" size="lg" radius="full">
-              Voir mes projets
-            </Button>
-            <Button variant="bordered" size="lg" radius="full">
-              Me contacter
-            </Button>
+            
+            {/* 1. On enveloppe le bouton dans un vrai Link Next.js vers #projets */}
+            <Link href="#projets">
+              <Button color="primary" size="lg" radius="full">
+                Voir mes projets
+              </Button>
+            </Link>
+
+            {/* 2. On enveloppe le bouton dans une vraie balise HTML pour l'email */}
+            <a href="mailto:karim.elamrani@eleve.isep.fr">
+              <Button variant="bordered" size="lg" radius="full">
+                Me contacter
+              </Button>
+            </a>
+
           </div>
         </div>
 
         {/* Partie Droite : La Photo */}
         <div className="flex-1 flex justify-center md:justify-end">
           
-          {/* Conteneur rond : Fond blanc forcé et flex-centrage */}
           <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full bg-white border-[3px] border-blue-600 dark:border-blue-400 shadow-2xl overflow-hidden flex items-center justify-center z-10">
             
             <Image 
@@ -56,7 +67,10 @@ export default function Home() {
 
       {/* --- NOUVELLE SECTION : COMPÉTENCES --- */}
       <Skills />
-
+      
+      {/* --- NOUVELLE SECTION : PROJETS --- */}
+      <Projects />
+      
     </main>
   );
 }

@@ -17,7 +17,8 @@ export default function SiteNavbar() {
           <a href="#" className="text-blue-600 dark:text-blue-400">Accueil</a>
         </li>
         <li>
-          <a href="#" className="text-gray-600 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400 transition-colors">
+          {/* NOUVEAU : Le lien pointe maintenant vers l'ancre #projets */}
+          <a href="#projets" className="text-gray-600 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400 transition-colors">
             Projets ISEP
           </a>
         </li>
