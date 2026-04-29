@@ -2,6 +2,7 @@ import { Button } from "@heroui/react";
 import SiteNavbar from "../components/SiteNavbar";
 import Image from "next/image";
 import myPhoto from "../../public/photo-profile.jpg";
+import Skills from "../components/Skills";
 
 export default function Home() {
   return (
@@ -33,19 +34,18 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Partie Droite : La Photo (LA CORRECTION EST ICI) */}
+        {/* Partie Droite : La Photo */}
         <div className="flex-1 flex justify-center md:justify-end">
           
           {/* Conteneur rond : Fond blanc forcé et flex-centrage */}
           <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full bg-white border-[3px] border-blue-600 dark:border-blue-400 shadow-2xl overflow-hidden flex items-center justify-center z-10">
             
-            {/* -- CORRECTION TECHNIQUE : On fixe la taille de l'image pour forcer le carré -- */}
             <Image 
               src={myPhoto} 
               alt="Photo de Karim" 
-              width={300} // Largeur fixe explicite pour la simulation
-              height={300} // Hauteur fixe explicite (correspond à width pour forcer le carré)
-              className="object-cover scale-[0.90] rounded-full" // object-cover pour remplir, scale ajusté, rounded-full pour l'image
+              width={300} 
+              height={300} 
+              className="object-cover scale-[0.90] rounded-full" 
               priority 
             />
             
@@ -53,6 +53,10 @@ export default function Home() {
         </div>
 
       </div>
+
+      {/* --- NOUVELLE SECTION : COMPÉTENCES --- */}
+      <Skills />
+
     </main>
   );
 }
