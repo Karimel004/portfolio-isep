@@ -6,6 +6,8 @@ import Skills from "../components/Skills";
 import Projects from "../components/Projects";
 // NOUVEAU : On importe le vrai composant Link de Next.js
 import Link from "next/link"; 
+import Contact from "../components/Contact";
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
@@ -70,6 +72,10 @@ export default function Home() {
       
       {/* --- NOUVELLE SECTION : PROJETS --- */}
       <Projects />
+      
+      {/* --- NOUVELLE SECTION : CONTACT --- */}
+      <Contact />
+      <Footer />
       
     </main>
   );
