@@ -8,7 +8,7 @@ export default function Skills() {
   const tools = ["🐙 Git & GitHub", "💻 VS Code", "🖌️ Figma", "🐧 Linux"];
 
   return (
-    <section className="w-full max-w-7xl mx-auto px-8 py-24">
+    <section className="w-full max-w-7xl mx-auto px-8 py-24" id="competences">
       <FadeIn>
         {/* Le grand Titre */}
         <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-16">

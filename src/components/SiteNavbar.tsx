@@ -24,6 +24,16 @@ export default function SiteNavbar() {
         <li>
           <a href="#" className="text-blue-600 dark:text-blue-400">Accueil</a>
         </li>
+         <li>
+          <a href="#parcours" className="text-gray-600 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400 transition-colors">
+            Parcours
+          </a>
+        </li>
+        <li>
+          <a href="#competences" className="text-gray-600 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400 transition-colors">
+            Compétences
+          </a>
+        </li>
         <li>
           <a href="#projets" className="text-gray-600 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400 transition-colors">
             Projets ISEP
@@ -34,6 +44,7 @@ export default function SiteNavbar() {
             Contact
           </a>
         </li>
+        
       </ul>
 
       {/* Boutons (Dark Mode + CV) */}

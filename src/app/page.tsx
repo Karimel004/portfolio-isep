@@ -7,7 +7,7 @@ import Projects from "../components/Projects";
 import Link from "next/link"; 
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
-
+import Experience from "../components/Experience";
 export default function Home() {
   return (
     <main className="min-h-screen bg-white dark:bg-[#0a0a0a] text-gray-900 dark:text-white">
@@ -88,6 +88,7 @@ export default function Home() {
       </div>
 
       {/* --- SECTIONS SUIVANTES --- */}
+      <Experience />
       <Skills />
       <Projects />
       <Contact />
