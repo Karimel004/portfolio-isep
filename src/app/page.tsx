@@ -87,6 +87,7 @@ export default function Home() {
 
       </div>
 
+      {/* --- SECTIONS SUIVANTES --- */}
       <Skills />
       <Projects />
       <Contact />
