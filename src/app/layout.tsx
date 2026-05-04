@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Karim EL AMRANI | Portfolio",
-  description: "Étudiant ingénieur à l'ISEP - Software Engineering & Alternance 2025",
+  description: "Étudiant ingénieur à l'ISEP - Software Engineering & Alternance 2026",
   icons: {
     // Cette ligne génère une icône à partir d'un simple Emoji !
     icon: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">👨‍💻</text></svg>',
