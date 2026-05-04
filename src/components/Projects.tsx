@@ -14,7 +14,15 @@ export default function Projects() {
         "Dashboard organisateur (architecture MVC) : suivi des ventes et avis clients.",
         "Sécurité & Authentification : JWT/Tokens et restriction d'accès par rôles."
       ],
-      techs: ["React", "Node.js", "PostgreSQL", "Prisma", "HeroUI", "API Paiement"],
+      // Utilisation d'un mix entre Logos officiels et Emojis
+      techs: [
+        { name: "React", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" },
+        { name: "Node.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" },
+        { name: "PostgreSQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" },
+        { name: "Prisma", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prisma/prisma-original.svg" },
+        { name: "HeroUI", emoji: "🎨" },
+        { name: "API Paiement", emoji: "💳" }
+      ],
       link: "#",
       color: "bg-indigo-500"
     },
@@ -29,7 +37,12 @@ export default function Projects() {
         "Optimisation Laravel Eloquent : temps de chargement divisé par 2.",
         "Workflow Git rigoureux (25+ commits) et séparation claire Backend/UI."
       ],
-      techs: ["Laravel", "TypeScript", "MySQL", "Tailwind CSS"],
+      techs: [
+        { name: "Laravel", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" },
+        { name: "TypeScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" },
+        { name: "MySQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" },
+        { name: "Tailwind CSS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" }
+      ],
       link: "#",
       color: "bg-blue-600"
     },
@@ -43,7 +56,13 @@ export default function Projects() {
         "Ingénierie matérielle (C) : traitement de trames 5 octets & checksum.",
         "Tunnel client : réservation de tables, menu digital et blog culinaire."
       ],
-      techs: ["PHP", "JavaScript", "C (IoT)", "MySQL", "HTML/CSS"],
+      techs: [
+        { name: "PHP", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" },
+        { name: "JavaScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" },
+        { name: "C (IoT)", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" },
+        { name: "MySQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" },
+        { name: "HTML/CSS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" }
+      ],
       link: "#",
       color: "bg-emerald-600"
     },
@@ -57,7 +76,13 @@ export default function Projects() {
         "Réduction de dimension (PCA), standardisation et matrice de covariance.",
         "Interprétation via cercle de corrélation et PVE cumulé."
       ],
-      techs: ["Python", "Pandas", "Scikit-learn", "Matplotlib", "SQL"],
+      techs: [
+        { name: "Python", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" },
+        { name: "Pandas", emoji: "🐼" },
+        { name: "Scikit-learn", emoji: "🤖" },
+        { name: "Matplotlib", emoji: "📊" },
+        { name: "SQL", emoji: "🗄️" }
+      ],
       link: "#",
       color: "bg-purple-600"
     },
@@ -72,7 +97,13 @@ export default function Projects() {
         "Back-Office CRUD gérant plus de 300 entrées (profils/réservations).",
         "Qualité logicielle : 70% de couverture en tests unitaires et CI/CD."
       ],
-      techs: ["PHP", "JavaScript", "MySQL", "HTML5", "CSS3"],
+      techs: [
+        { name: "PHP", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" },
+        { name: "JavaScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" },
+        { name: "MySQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" },
+        { name: "HTML5", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" },
+        { name: "CSS3", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" }
+      ],
       link: "#",
       color: "bg-orange-500"
     }
@@ -112,17 +143,24 @@ export default function Projects() {
                   {project.description}
                 </p>
 
-                {/* --- L'AJOUT DES DÉTAILS SOUS FORME DE LISTE --- */}
                 <ul className="list-disc ml-5 space-y-2 text-sm text-gray-600 dark:text-gray-400 mb-8 flex-1">
                   {project.features.map((feature, i) => (
                     <li key={i} className="leading-relaxed">{feature}</li>
                   ))}
                 </ul>
 
+                {/* Affichage des technologies avec leurs logos ou émojis */}
                 <div className="flex flex-wrap gap-2 mb-8">
                   {project.techs.map((tech, i) => (
                     <Chip key={i} size="sm" variant="flat" className="bg-gray-100 dark:bg-gray-800">
-                      {tech}
+                      <div className="flex items-center gap-1.5">
+                        {tech.logo ? (
+                          <img src={tech.logo} alt={tech.name} className="w-4 h-4 bg-white rounded-full p-[1px] shadow-sm" />
+                        ) : (
+                          <span>{tech.emoji}</span>
+                        )}
+                        <span className="font-medium">{tech.name}</span>
+                      </div>
                     </Chip>
                   ))}
                 </div>
