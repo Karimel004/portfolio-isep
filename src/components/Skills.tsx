@@ -2,10 +2,29 @@ import { Chip } from "@heroui/react";
 import FadeIn from "./FadeIn";
 
 export default function Skills() {
-  // On a ajouté les petits "logos" (émojis) juste à côté du nom de chaque compétence !
-  const frontend = ["🌐 HTML5", "🎨 CSS3", "⚛️ React.js", "🖤 Next.js", "🌊 Tailwind CSS"];
-  const backend = ["🍃 Node.js", "🐍 Python", "☕ Java", "🗄️ SQL", "⚙️ C++"];
-  const tools = ["🐙 Git & GitHub", "💻 VS Code", "🖌️ Figma", "🐧 Linux"];
+  // On utilise maintenant des objets avec le nom ET le lien direct vers le vrai logo !
+  const frontend = [
+    { name: "HTML5", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" },
+    { name: "CSS3", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" },
+    { name: "React.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" },
+    { name: "Next.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" },
+    { name: "Tailwind CSS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" }
+  ];
+
+  const backend = [
+    { name: "Node.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" },
+    { name: "Python", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" },
+    { name: "Java", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" },
+    { name: "SQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" },
+    { name: "C++", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" }
+  ];
+
+  const tools = [
+    { name: "Git & GitHub", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" },
+    { name: "VS Code", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" },
+    { name: "Figma", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" },
+    { name: "Linux", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" }
+  ];
 
   return (
     <section className="w-full max-w-7xl mx-auto px-8 py-24" id="competences">
@@ -26,7 +45,11 @@ export default function Skills() {
             <div className="flex flex-wrap justify-center gap-3">
               {frontend.map((skill, index) => (
                 <Chip key={index} color="primary" variant="flat" size="lg">
-                  {skill}
+                  <div className="flex items-center gap-2">
+                    {/* L'image du logo */}
+                    <img src={skill.logo} alt={skill.name} className="w-5 h-5 bg-white rounded-full p-[2px] shadow-sm" />
+                    <span className="font-semibold">{skill.name}</span>
+                  </div>
                 </Chip>
               ))}
             </div>
@@ -40,7 +63,10 @@ export default function Skills() {
             <div className="flex flex-wrap justify-center gap-3">
               {backend.map((skill, index) => (
                 <Chip key={index} color="secondary" variant="flat" size="lg">
-                  {skill}
+                  <div className="flex items-center gap-2">
+                    <img src={skill.logo} alt={skill.name} className="w-5 h-5 bg-white rounded-full p-[2px] shadow-sm" />
+                    <span className="font-semibold">{skill.name}</span>
+                  </div>
                 </Chip>
               ))}
             </div>
@@ -54,7 +80,10 @@ export default function Skills() {
             <div className="flex flex-wrap justify-center gap-3">
               {tools.map((skill, index) => (
                 <Chip key={index} color="success" variant="flat" size="lg">
-                  {skill}
+                  <div className="flex items-center gap-2">
+                    <img src={skill.logo} alt={skill.name} className="w-5 h-5 bg-white rounded-full p-[2px] shadow-sm" />
+                    <span className="font-semibold">{skill.name}</span>
+                  </div>
                 </Chip>
               ))}
             </div>

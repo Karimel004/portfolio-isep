@@ -7,26 +7,24 @@ import { useEffect, useState } from "react";
 export default function SiteNavbar() {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // Gère l'ouverture du menu mobile
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // Évite les bugs d'affichage au chargement de la page
   useEffect(() => setMounted(true), []);
 
-  // Fonction pour fermer le menu après un clic sur mobile
   const closeMenu = () => setIsMenuOpen(false);
 
   return (
+    // "sticky top-0 z-50" permet à la barre de rester en haut au scroll
     <nav className="w-full border-b border-gray-200 dark:border-gray-800 sticky top-0 z-50 backdrop-blur-md bg-white/80 dark:bg-black/80">
       
-      {/* Conteneur de la barre visible */}
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 md:px-8 py-4 w-full">
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 md:px-8 py-4">
         
         {/* Logo */}
         <div>
-          <p className="font-bold text-lg md:text-xl tracking-tight">Mon Portfolio</p>
+          <p className="font-bold text-lg md:text-xl tracking-tight text-gray-900 dark:text-white">Mon Portfolio</p>
         </div>
 
-        {/* Liens (Cachés sur mobile, visibles sur PC) */}
+        {/* Liens PC */}
         <ul className="hidden md:flex items-center gap-8 font-medium">
           <li><a href="#" className="text-blue-600 dark:text-blue-400">Accueil</a></li>
           <li><a href="#parcours" className="text-gray-600 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400 transition-colors">Parcours</a></li>
@@ -38,7 +36,6 @@ export default function SiteNavbar() {
         {/* Boutons Actions */}
         <div className="flex items-center gap-3 md:gap-4">
           
-          {/* Bouton Dark Mode (Uniquement sur PC, sur mobile il est dans le menu) */}
           {mounted && (
             <Button 
               isIconOnly 
@@ -50,16 +47,15 @@ export default function SiteNavbar() {
             </Button>
           )}
 
-          {/* Bouton CV (Toujours visible ! J'ai juste réduit un peu le texte sur mobile) */}
           <a href="/cv-karim.pdf" download="CV_Karim_EL_AMRANI.pdf">
-            <Button color="primary" className="font-bold text-xs md:text-sm px-3 md:px-4" size="sm">
+            <Button color="primary" className="font-bold text-xs md:text-sm" size="sm">
               Télécharger CV
             </Button>
           </a>
 
-          {/* Bouton Hamburger (Visible uniquement sur Mobile) */}
+          {/* Hamburger mobile */}
           <button 
-            className="md:hidden text-2xl p-1 focus:outline-none"
+            className="md:hidden text-2xl p-1 text-gray-900 dark:text-white"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? '✖' : '☰'}
@@ -67,25 +63,24 @@ export default function SiteNavbar() {
         </div>
       </div>
 
-      {/* --- MENU DÉROULANT MOBILE (Le Hamburger) --- */}
+      {/* Menu mobile déroulant */}
       {isMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-white dark:bg-[#0a0a0a] border-b border-gray-200 dark:border-gray-800 shadow-xl flex flex-col p-6 gap-6">
+        <div className="md:hidden absolute top-full left-0 w-full bg-white dark:bg-[#0a0a0a] border-b border-gray-200 dark:border-gray-800 shadow-xl flex flex-col p-6 gap-6 animate-in slide-in-from-top duration-300">
           <a href="#" onClick={closeMenu} className="font-bold text-blue-600 dark:text-blue-400 text-lg">Accueil</a>
-          <a href="#parcours" onClick={closeMenu} className="font-medium text-lg">Parcours</a>
-          <a href="#competences" onClick={closeMenu} className="font-medium text-lg">Compétences</a>
-          <a href="#projets" onClick={closeMenu} className="font-medium text-lg">Projets ISEP</a>
-          <a href="#contact" onClick={closeMenu} className="font-medium text-lg">Contact</a>
+          <a href="#parcours" onClick={closeMenu} className="font-medium text-lg text-gray-900 dark:text-white">Parcours</a>
+          <a href="#competences" onClick={closeMenu} className="font-medium text-lg text-gray-900 dark:text-white">Compétences</a>
+          <a href="#projets" onClick={closeMenu} className="font-medium text-lg text-gray-900 dark:text-white">Projets ISEP</a>
+          <a href="#contact" onClick={closeMenu} className="font-medium text-lg text-gray-900 dark:text-white">Contact</a>
           
           <div className="w-full h-px bg-gray-200 dark:bg-gray-800"></div>
           
-          {/* Bouton Thème intégré dans le menu mobile */}
           {mounted && (
             <button 
               onClick={() => {
                 setTheme(theme === 'dark' ? 'light' : 'dark');
                 closeMenu();
               }}
-              className="flex items-center gap-3 font-bold text-gray-600 dark:text-gray-300 w-full text-left"
+              className="flex items-center gap-3 font-bold text-gray-600 dark:text-gray-300"
             >
               <span className="text-2xl">{theme === 'dark' ? '☀️' : '🌙'}</span>
               Changer le thème
