@@ -14,8 +14,8 @@ export default function Experience() {
     {
       year: "2022 - 2024",
       title: "Classes Préparatoires aux Grandes Écoles (CPGE)",
-      company: "Lycée d'Excellence (Oujda, Maroc)",
-      description: "Filière Mathématiques et Physique (MP). Formation scientifique intensive et exigeante avec une forte composante en mathématiques, physique et sciences de l'ingénieur.",
+      company: "Lycée Omar Ibn Abdelaziz (Oujda, Maroc)",
+      description: "Filière technologie et sciences industrielles (TSI). Formation scientifique intensive et exigeante avec une forte composante en mathématiques, physique et sciences de l'ingénieur.",
       icon: "📚",
       color: "bg-purple-500"
     },
