@@ -75,8 +75,8 @@ export default function Home() {
             <Image 
               src={myPhoto} 
               alt="Photo de Karim" 
-              width={300} 
-              height={300} 
+              width={245} 
+              height={245} 
               className="object-cover scale-[0.90] rounded-full" 
               priority 
             />

@@ -43,7 +43,7 @@ export default function Projects() {
         { name: "MySQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" },
         { name: "Tailwind CSS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" }
       ],
-      link: "#",
+      link: "https://github.com/Karimel004/Smart-event-management",
       color: "bg-blue-600"
     },
     {
