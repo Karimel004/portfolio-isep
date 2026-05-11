@@ -23,7 +23,7 @@ export default function Projects() {
         { name: "HeroUI", emoji: "🎨" },
         { name: "API Paiement", emoji: "💳" }
       ],
-      link: "#",
+      link: "https://quickseat-front.vercel.app/",
       color: "bg-indigo-500"
     },
     {
@@ -165,16 +165,26 @@ export default function Projects() {
                   ))}
                 </div>
 
-                <Button 
-                  as="a" 
-                  href={project.link}
-                  target="_blank"
-                  color="default" 
-                  variant="bordered" 
-                  className="w-full font-bold group-hover:border-blue-500 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors"
-                >
-                  Voir sur GitHub / Détails 🐙
-                </Button>
+                {project.link && project.link !== "#" ? (
+                  <a href={project.link} target="_blank" rel="noopener noreferrer" className="w-full">
+                    <Button
+                      color="default"
+                      variant="bordered"
+                      className="w-full font-bold group-hover:border-blue-500 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors"
+                    >
+                      Voir le projet / Détails
+                    </Button>
+                  </a>
+                ) : (
+                  <Button
+                    color="default"
+                    variant="bordered"
+                    className="w-full font-bold opacity-60 cursor-not-allowed"
+                    disabled
+                  >
+                    Infos à venir
+                  </Button>
+                )}
               </div>
             </div>
           ))}
