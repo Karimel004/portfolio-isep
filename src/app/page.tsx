@@ -42,7 +42,7 @@ export default function Home() {
             <div className="md:col-span-2 space-y-1 md:space-y-2 pt-2 border-t border-gray-200 dark:border-gray-800 text-center md:text-left">
               <p className="text-xs md:text-sm uppercase tracking-wider text-blue-500 font-bold">🎯 Objectif Alternance</p>
               <p className="text-base md:text-lg font-bold italic">
-                Recherche une alternance de 12 mois en Software Engineering (Sept. 2026)
+                Recherche d'un stage ou une alternance de 12 mois en Software Engineering (Sept. 2026)
               </p>
             </div>
           </div>
