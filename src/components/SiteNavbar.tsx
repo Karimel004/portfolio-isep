@@ -47,7 +47,7 @@ export default function SiteNavbar() {
             </Button>
           )}
 
-          <a href="/cv-karim.pdf" download="CV_Karim_EL_AMRANI.pdf">
+          <a href="/cv El amrani-Karim.pdf" download="CV_Karim_EL_AMRANI.pdf">
             <Button color="primary" className="font-bold text-xs md:text-sm" size="sm">
               Télécharger CV
             </Button>
