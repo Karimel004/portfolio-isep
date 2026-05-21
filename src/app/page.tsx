@@ -1,7 +1,7 @@
 import { Button } from "@heroui/react";
 import SiteNavbar from "../components/SiteNavbar";
 import Image from "next/image";
-import myPhoto from "../../public/photo-profile.jpg";
+import myPhoto from "../../public/photo-profile.png";
 import Skills from "../components/Skills";
 import Projects from "../components/Projects";
 import Link from "next/link"; 
@@ -75,8 +75,8 @@ export default function Home() {
             <Image 
               src={myPhoto} 
               alt="Photo de Karim" 
-              width={245} 
-              height={245} 
+              width={275} 
+              height={275} 
               className="object-cover scale-[0.90] rounded-full" 
               priority 
             />
