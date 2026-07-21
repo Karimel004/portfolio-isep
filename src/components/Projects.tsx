@@ -6,7 +6,7 @@ export default function Projects() {
     {
       title: "QuickSeat",
       role: "Développeur Full Stack",
-      date: "Jan 2026 – En cours",
+      date: "Jan 2026 – Juin 2026",
       description: "Plateforme de Ticketing et Gestion d'Événements avec tunnel d'achat complet.",
       features: [
         "Gestion des stocks en temps réel (catégories VIP, Standard) et flux de paiement.",
@@ -14,7 +14,6 @@ export default function Projects() {
         "Dashboard organisateur (architecture MVC) : suivi des ventes et avis clients.",
         "Sécurité & Authentification : JWT/Tokens et restriction d'accès par rôles."
       ],
-      // Utilisation d'un mix entre Logos officiels et Emojis
       techs: [
         { name: "React", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" },
         { name: "Node.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" },
@@ -23,8 +22,29 @@ export default function Projects() {
         { name: "HeroUI", emoji: "🎨" },
         { name: "API Paiement", emoji: "💳" }
       ],
-      link: "https://quickseat-front.vercel.app/",
+      link: "#",
       color: "bg-indigo-500"
+    },
+    {
+      title: "EduFlow",
+      role: "Développeur Frontend React",
+      date: "Février 2026 – Juin 2026",
+      description: "Plateforme de Gestion Scolaire & Accompagnement Éducatif.",
+      features: [
+        "Data Visualisation (Recharts) : interface de suivi avec graphiques interactifs des variables comportementales.",
+        "Gestion des devoirs : système de sous-tâches, cycle de vie (validation, report) et feedback visuel de complétion.",
+        "Performance & Robustesse : requêtes asynchrones (Promise.all), prévention des fuites de mémoire et UI skeletons.",
+        "Qualité & Git : intégration stricte d'un Design System et workflow collaboratif (Branching, PRs)."
+      ],
+      techs: [
+        { name: "React", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" },
+        { name: "Tailwind CSS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" },
+        { name: "Git", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" },
+        { name: "Recharts", emoji: "📊" },
+        { name: "Axios/REST API", emoji: "🔗" }
+      ],
+      link: "#",
+      color: "bg-teal-500"
     },
     {
       title: "Tailored Social Network",
@@ -43,7 +63,7 @@ export default function Projects() {
         { name: "MySQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" },
         { name: "Tailwind CSS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" }
       ],
-      link: "https://github.com/Karimel004/Smart-event-management",
+      link: "#",
       color: "bg-blue-600"
     },
     {
@@ -165,26 +185,16 @@ export default function Projects() {
                   ))}
                 </div>
 
-                {project.link && project.link !== "#" ? (
-                  <a href={project.link} target="_blank" rel="noopener noreferrer" className="w-full">
-                    <Button
-                      color="default"
-                      variant="bordered"
-                      className="w-full font-bold group-hover:border-blue-500 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors"
-                    >
-                      Voir le projet / Détails
-                    </Button>
-                  </a>
-                ) : (
-                  <Button
-                    color="default"
-                    variant="bordered"
-                    className="w-full font-bold opacity-60 cursor-not-allowed"
-                    disabled
-                  >
-                    Infos à venir
-                  </Button>
-                )}
+                <Button 
+                  as="a" 
+                  href={project.link}
+                  target="_blank"
+                  color="default" 
+                  variant="bordered" 
+                  className="w-full font-bold group-hover:border-blue-500 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors"
+                >
+                  Voir sur GitHub / Détails 🐙
+                </Button>
               </div>
             </div>
           ))}
