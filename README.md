@@ -1,36 +1,31 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Portfolio Personnel - Karim El Amrani
 
-## Getting Started
+[![Deploy with Vercel](https://vercel.com/button)](https://portfolio-isep.vercel.app)
 
-First, run the development server:
+Bienvenue sur le code source de mon portfolio personnel. Je suis étudiant en ingénierie logicielle à l'**ISEP Paris** et actuellement à la recherche d'un stage de 6 mois en **Software Engineering / Full-Stack** à partir de Septembre 2026.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+🔗 **[Visiter le Portfolio en ligne](https://portfolio-isep.vercel.app)**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Stack Technique
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Ce portfolio a été conçu avec une approche moderne et optimisée pour les performances :
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+* **Framework :** Next.js (App Router) / React
+* **Langage :** TypeScript
+* **Styling :** Tailwind CSS & HeroUI
+* **Déploiement :** Vercel (CI/CD automatisé)
+* **Design :** Dark/Light mode interactif, Responsive Mobile-First
 
-## Learn More
+## 📂 Projets Mis en Avant
 
-To learn more about Next.js, take a look at the following resources:
+Vous retrouverez sur ce portfolio les détails techniques de mes projets majeurs :
+* **QuickSeat** : Plateforme de Ticketing (React, Node.js, PostgreSQL)
+* **EduFlow** : Gestion Scolaire & Data Visualisation (Recharts, React)
+* **Tailored Social Network** : Application de communication (Laravel, TypeScript)
+* Et d'autres projets alliant IoT (C) et Data Analysis (Python).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📫 Me Contacter
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+* **Email :** karim.elamrani@eleve.isep.fr
+* **LinkedIn :** [Karim El Amrani](https://www.linkedin.com/in/karim-el-amrani-6b6512320)
+* **CV :** Téléchargeable directement depuis le [portfolio](https://portfolio-isep.vercel.app).
