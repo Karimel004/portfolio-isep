@@ -14,11 +14,28 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Karim EL AMRANI | Portfolio",
-  description: "Étudiant ingénieur à l'ISEP - Software Engineering & Alternance 2026",
+  title: "Karim EL AMRANI | Software Engineer",
+  description: "Étudiant ingénieur à l'ISEP - À la recherche d'un stage de 6 mois en Software Engineering.",
   icons: {
-    // Cette ligne génère une icône à partir d'un simple Emoji !
+    // Ton super Favicon emoji !
     icon: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">👨‍💻</text></svg>',
+  },
+  // La partie ajoutée spécialement pour LinkedIn, WhatsApp, etc.
+  openGraph: {
+    title: "Karim EL AMRANI | Software Engineer",
+    description: "Étudiant à l'ISEP. Découvrez mes projets techniques (React, Node.js). À la recherche d'un stage de 6 mois en Software Engineering.",
+    url: "https://portfolio-isep.vercel.app",
+    siteName: "Portfolio de Karim EL AMRANI",
+    images: [
+      {
+        url: "https://portfolio-isep.vercel.app/og-image.png", 
+        width: 1200,
+        height: 630,
+        alt: "Aperçu du portfolio de Karim EL AMRANI",
+      },
+    ],
+    locale: "fr_FR",
+    type: "website",
   },
 };
 
