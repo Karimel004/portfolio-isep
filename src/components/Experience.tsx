@@ -7,7 +7,7 @@ export default function Experience() {
       year: "2024 - 2027",
       title: "Cycle Ingénieur en Informatique",
       company: "ISEP - École d'Ingénieurs du Numérique (Paris)",
-      description: "Spécialisation en Ingénierie Logicielle (Software Engineering). Préparation d'un diplôme d'ingénieur reconnu par la CTI. En recherche active d'une alternance de 12 mois pour Septembre 2026.",
+      description: "Spécialisation en Ingénierie Logicielle (Software Engineering). Préparation d'un diplôme d'ingénieur reconnu par la CTI.",
       icon: "🎓",
       color: "bg-blue-500"
     },

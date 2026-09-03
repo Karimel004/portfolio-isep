@@ -2,7 +2,7 @@
 
 [![Deploy with Vercel](https://vercel.com/button)](https://portfolio-isep.vercel.app)
 
-Bienvenue sur le code source de mon portfolio personnel. Je suis étudiant en ingénierie logicielle à l'**ISEP Paris** et actuellement à la recherche d'un stage de 6 mois en **Software Engineering / Full-Stack** à partir de Septembre 2026.
+Bienvenue sur le code source de mon portfolio personnel. Je suis étudiant en ingénierie logicielle à l'**ISEP Paris** et actuellement à la recherche d'un stage de 6 mois en **Software Engineering / Full-Stack** à partir de Février 2027.
 
 🔗 **[Visiter le Portfolio en ligne](https://portfolio-isep.vercel.app)**
 
