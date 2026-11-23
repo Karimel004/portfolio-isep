@@ -26,7 +26,7 @@ export default function Home() {
               <span className="text-blue-600 dark:text-blue-400">Karim EL AMRANI</span> 👋
             </h1>
             <p className="text-lg md:text-xl font-medium text-blue-600 dark:text-blue-400 text-center md:text-left">
-              Étudiant en 2ème année cycle ingénieur à l'ISEP Paris
+              Étudiant en 3ème année cycle ingénieur à l'ISEP Paris
             </p>
           </div>
           
